@@ -1,0 +1,102 @@
+/* =============================================
+   CALCULATOR STYLES
+   ============================================= */
+
+/* Calculator-specific form layouts */
+.calc-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+@media (max-width: 640px) {
+  .calc-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mebel calculator items */
+.mebel-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.mebel-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-gray-200);
+}
+
+.mebel-item__info {
+  flex: 1;
+}
+
+.mebel-item__name {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-gray-800);
+}
+
+.mebel-item__price {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+}
+
+@media (max-width: 640px) {
+  .mebel-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Extras checkboxes */
+.calc-extras {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.calc-extra {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  border: 1px solid var(--color-gray-200);
+  transition: all var(--transition-fast);
+}
+
+.calc-extra:hover {
+  border-color: var(--color-primary-200);
+  background: var(--color-primary-50);
+}
+
+.calc-extra input[type="checkbox"]:checked + .calc-extra__label {
+  color: var(--color-primary);
+}
+
+.calc-extra__label {
+  font-size: var(--text-sm);
+  color: var(--color-gray-700);
+  cursor: pointer;
+}
+
+.calc-extra__price {
+  margin-left: auto;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .calc-extras {
+    grid-template-columns: 1fr;
+  }
+}

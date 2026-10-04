@@ -1,0 +1,9 @@
+{
+  "name": "cleanin-express",
+  "version": "1.0.0",
+  "description": "Cleanin Express - Professional Cleaning Company Website",
+  "scripts": {
+    "dev": "npx -y live-server --port=3000 --no-browser",
+    "serve": "npx -y http-server -p 3000 -c-1"
+  }
+}

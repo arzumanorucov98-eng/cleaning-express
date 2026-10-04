@@ -1,0 +1,14 @@
+{
+  "name": "cleaning-express-service",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Cleaning Express Service — 3D interaktiv sayt",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && npx -y http-server -p 3000 -c-1"
+  },
+  "dependencies": {
+    "jimp": "^1.6.1"
+  }
+}
