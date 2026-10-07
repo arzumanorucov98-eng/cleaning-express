@@ -356,7 +356,7 @@ for (const blog of BLOGS) {
   </div>
 </section>
 <section class="section container">
-  <article class="glass" style="padding: 2rem; border-radius: 1rem; max-width: 800px; margin: 0 auto;">
+  <article class="glass blog-article" style="padding: 2.5rem; border-radius: 1rem; max-width: 800px; margin: 0 auto;">
     ${blog.content}
   </article>
 </section>`;
