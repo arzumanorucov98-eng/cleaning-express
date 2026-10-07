@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://cleaningexpress.az/</loc></url>
-  <url><loc>https://cleaningexpress.az/haqqimizda.html</loc></url>
-  <url><loc>https://cleaningexpress.az/bloq.html</loc></url>
-  <url><loc>https://cleaningexpress.az/xidmetler/$(${s.slug}).html</loc></url>
-  <url><loc>https://cleaningexpress.az/xidmetler/$(${s.slug}).html</loc></url>
-  <url><loc>https://cleaningexpress.az/xidmetler/$(${s.slug}).html</loc></url>
-  <url><loc>https://cleaningexpress.az/xidmetler/$(${s.slug}).html</loc></url>
-  <url><loc>https://cleaningexpress.az/xidmetler/$(${s.slug}).html</loc></url>
-  <url><loc>https://cleaningexpress.az/xidmetler/$(${s.slug}).html</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/haqqimizda.html</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/bloq.html</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/xidmetler/ev-temizliyi.html</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/xidmetler/temir-sonrasi-temizlik.html</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/xidmetler/yumsaq-mebel-kimyavi-temizliyi.html</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/xidmetler/obyekt-temizliyi.html</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/xidmetler/restoran-temizliyi.html</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/xidmetler/ofis-temizliyi.html</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/bloq/ofis-temizliyinin-faydalari.html</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/bloq/ev-temizliyinde-yol-verilen-sehvler.html</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/bloq/usaq-otaqlarinin-temizliyi.html</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/bloq/heyvan-saxlayanlar-ucun-temizlik.html</loc></url>
+  <url><loc>https://cleaning-express-flame.vercel.app/bloq/xalca-temizliyinde-diqqet.html</loc></url>
 </urlset>

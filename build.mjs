@@ -80,7 +80,7 @@ const layout = ({ title, desc, path, scene, active, body, schema }) => `<!DOCTYP
 <meta property="og:title" content="${esc(title)}" />
 <meta property="og:description" content="${esc(desc)}" />
 <meta property="og:url" content="${SITE.url}${path}" />
-<meta property="og:image" content="${SITE.url}${SITE.logo}" />
+<meta property="og:image" content="${SITE.url}${SITE.ogImage}" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="${SITE.logo}" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -160,6 +160,18 @@ const home = `
     <div class="step glass"><b>2</b><h3>Qiyməti hesabla</h3><p>Sahə, otaq və ya əşya sayını yaz, nəticə dərhal çıxır.</p></div>
     <div class="step glass"><b>3</b><h3>Məlumatlarını yaz</h3><p>Ad, nömrə, ünvan, tarix və vaxtı daxil et.</p></div>
     <div class="step glass"><b>4</b><h3>WhatsApp ilə təsdiqlə</h3><p>Bütün detallar bizə avtomatik göndərilir.</p></div>
+  </div>
+</section>
+
+<section class="section container" id="videolar">
+  <h2 class="section-title">İş Proseslərimiz</h2>
+  <p class="section-sub">Qısa videolarla (Shorts) real təmizlik prosesimizi izləyin.</p>
+  <div class="shorts-grid">
+    ${SITE.youtubeShorts && SITE.youtubeShorts.length > 0 
+      ? SITE.youtubeShorts.map(id => 
+          `<div class="short-wrapper"><iframe src="https://www.youtube.com/embed/${id}?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`
+        ).join('') 
+      : '<p>Tezliklə videolar əlavə olunacaq...</p>'}
   </div>
 </section>`;
 
@@ -250,6 +262,132 @@ const aboutBody = `
 </section>`;
 writeFileSync('haqqimizda.html', layout({ title: `Haqqımızda | ${SITE.name}`, desc: 'Şirkətimiz, missiyamız və təmizlik sahəsindəki peşəkar yanaşmamız haqqında geniş məlumat.', path: '/haqqimizda.html', scene: 'office', active: 'about', body: aboutBody, schema: bizSchema }));
 
+const BLOGS = [
+  {
+    slug: 'ofis-temizliyinin-faydalari',
+    title: 'Ofis Təmizliyinin İşçilərin Məhsuldarlığına Təsiri',
+    description: 'Təmiz bir ofis mühiti işçilərin motivasiyasını və məhsuldarlığını necə artırır? Ofis təmizliyinin faydaları haqqında ətraflı məlumat.',
+    content: `
+      <h2>Təmiz Ofis, Yüksək Məhsuldarlıq</h2>
+      <p>İş yerindəki mühit işçilərin psixologiyasına və fiziki sağlamlığına birbaşa təsir göstərir. Təmiz və səliqəli bir ofis yalnız müştərilərdə yaxşı təəssürat yaratmaqla qalmır, həm də işçilərin məhsuldarlığını əhəmiyyətli dərəcədə artırır.</p>
+      <h3>Xəstəliklərin Qarşısının Alınması</h3>
+      <p>Ofislərdə insanların sıx təmasda olması infeksiyaların sürətlə yayılmasına səbəb ola bilər. Peşəkar ofis təmizliyi xidməti sayəsində masalar, qapı tutacaqları və ümumi istifadə sahələri dezinfeksiya edilir. Bu isə işçilərin xəstələnmə hallarını və işə gəlməmə günlərini azaldır.</p>
+      <h3>Konsentrasiyanın Artması</h3>
+      <p>Dağınıq və çirkli bir mühit diqqəti yayındırır. Araşdırmalar göstərir ki, səliqəli bir masada çalışan işçilər tapşırıqlara daha yaxşı fokuslana bilirlər. Təmiz mühit zehni yorğunluğu azaldır və yaradıcılığı stimullaşdırır.</p>
+      <h3>Peşəkar İmic</h3>
+      <p>Ofisə gələn qonaqlar və müştərilər üçün ilk təəssürat çox vacibdir. Parıldayan döşəmələr, təmiz şüşələr və səliqəli iş masaları şirkətinizin peşəkarlığından və detallara verdiyi diqqətdən xəbər verir.</p>
+      <p><strong>Nəticə:</strong> Şirkətinizin uğuru üçün mütəmadi olaraq peşəkar təmizlik xidmətlərindən yararlanmaq ən yaxşı investisiyalardan biridir. Cleaning Express Service olaraq ofisinizin hər zaman təmiz və təravətli qalmasını təmin edirik.</p>
+    `
+  },
+  {
+    slug: 'ev-temizliyinde-yol-verilen-sehvler',
+    title: 'Ev Təmizliyində Yol Verilən 7 Əsas Səhv',
+    description: 'Ev təmizliyini daha da çətinləşdirən və vaxt itkisinə səbəb olan ən çox yayılmış 7 səhv. Düzgün təmizlik qaydalarını öyrənin.',
+    content: `
+      <h2>Təmizlik Edərkən Hansı Səhvlərə Yol Veririk?</h2>
+      <p>Ev təmizliyi gündəlik həyatımızın ayrılmaz bir hissəsidir. Lakin bəzən bilmədən etdiyimiz səhvlər təmizlik prosesini həm uzadır, həm də səmərəsiz edir.</p>
+      <h3>1. Təmizliyə Səhv Yerdən Başlamaq</h3>
+      <p>Ən böyük səhvlərdən biri döşəməni silib sonra toz almaqdır. Toz aldıqda hissəciklər yenidən yerə düşür. Qayda belə olmalıdır: Təmizliyə həmişə yuxarıdan aşağıya doğru başlayın.</p>
+      <h3>2. Eyni Bezi Hər Yerdə İstifadə Etmək</h3>
+      <p>Mətbəx masasını sildiyiniz bezlə hamam qapısını silmək bakteriyaların evin hər yerinə yayılmasına səbəb olur. Fərqli sahələr üçün fərqli rəngli mikrofiber bezlər istifadə etmək məsləhətdir.</p>
+      <h3>3. Təmizlik Vasitələrini Birbaşa Səthə Püskürtmək</h3>
+      <p>Spreyləri birbaşa mebelin üzərinə püskürtmək ləkə yarada bilər. Düzgün yol vasitəni əvvəlcə bezə, daha sonra səthə tətbiq etməkdir.</p>
+      <h3>4. Mebellərin Altını Unutmaq</h3>
+      <p>Yalnız görünən yerləri təmizləmək kifayət deyil. Divan və şkafların altında toplanan tozlar evdəki hava keyfiyyətini aşağı salır.</p>
+      <p><strong>Daha asan həll:</strong> Ev təmizliyini peşəkarlara həvalə edin! Cleaning Express Service komandası evinizin hər küncünü dərindən təmizləməyə hazırdır.</p>
+    `
+  },
+  {
+    slug: 'usaq-otaqlarinin-temizliyi',
+    title: 'Uşaq Otaqlarının Təmizliyi və Dezinfeksiyası',
+    description: 'Uşaq otaqlarının təhlükəsiz və gigiyenik olması üçün təmizlik zamanı nələrə diqqət edilməlidir? Sağlam təmizlik sirləri.',
+    content: `
+      <h2>Uşaqların Sağlamlığı Üçün Təmiz Mühit</h2>
+      <p>Uşaqların immunitet sistemi hələ tam formalaşmadığı üçün onların vaxt keçirdiyi mühitin təmizliyi xüsusi əhəmiyyət daşıyır. Uşaq otağının təmizliyi yalnız səliqə deyil, eyni zamanda mikrob və alergenlərdən arındırma prosesidir.</p>
+      <h3>Ekoloji Təmiz Vasitələrdən İstifadə</h3>
+      <p>Uşaq otağında sərt kimyəvi maddələrdən istifadə etməkdən çəkinin. Ağardıcı və ya güclü qoxulu təmizləyicilər uşaqların tənəffüs yollarına zərər verə bilər. Təbii və anti-allergik təmizlik vasitələrinə üstünlük verilməlidir.</p>
+      <h3>Oyuncaqların Mütəmadi Yuyulması</h3>
+      <p>Uşaqlar oyuncaqlarını tez-tez ağızlarına salırlar. Buna görə də rezin, plastik və peluş oyuncaqlar müntəzəm olaraq yuyulmalı və dezinfeksiya edilməlidir.</p>
+      <h3>Toz Gənələrinə Qarşı Mübarizə</h3>
+      <p>Xalçalar və yataq dəstləri toz gənələrinin ən sevdiyi yerlərdir. Uşaq otağında olan xalçalar tez-tez tozsoranlanmalı, yataq dəstləri isə yüksək dərəcədə yuyulmalıdır. Yumşaq mebel və xalçaların peşəkar kimyəvi təmizliyi uşağınızı allergiyadan qoruyur.</p>
+    `
+  },
+  {
+    slug: 'heyvan-saxlayanlar-ucun-temizlik',
+    title: 'Ev Heyvanı Saxlayanlar Üçün Təmizlik',
+    description: 'Ev heyvanı olan evlərdə təmizliyi necə qorumalı? Tük və ləkələrlə mübarizə üçün faydalı seo uyğun məsləhətlər.',
+    content: `
+      <h2>Sevimli Dostlarımız və Təmiz Ev</h2>
+      <p>Ev heyvanları həyatımıza sevinc qatsa da, onların tökülən tükləri və bəzən yaratdıqları ləkələr ev təmizliyini çətinləşdirə bilər. Lakin doğru strategiya ilə həm sevimli dostunuzla vaxt keçirə, həm də evinizi təmiz saxlaya bilərsiniz.</p>
+      <h3>Tüklərlə Mübarizə</h3>
+      <p>Tüklərin evə yayılmasının qarşısını almaq üçün ən yaxşı üsul ev heyvanınızı mütəmadi daramaqdır. Divan və xalçalardakı tükləri yığmaq üçün xüsusi rezin əlcəklərdən və ya tükyığan rulonlardan istifadə edə bilərsiniz.</p>
+      <h3>Qoxuları Yox Etmək</h3>
+      <p>Heyvanların yatdığı yerləri və qablarını tez-tez təmizləyin. Xalça və mebellərə hopmuş qoxuları aparmaq üçün karbonat (soda) əla təbii vasitədir. Səthə səpin, 15-20 dəqiqə gözləyin və tozsoranlayın.</p>
+      <h3>Ləkələrə Anında Müdaxilə</h3>
+      <p>Gözlənilməz "qəzalar" baş verdikdə ləkə qurumadan dərhal müdaxilə etmək lazımdır. Sidik ləkələri üçün sirkəli su qarışımı həm ləkəni, həm də qoxunu neytrallaşdırır.</p>
+      <p><strong>Peşəkar Dəstək:</strong> Dərinə hopmuş ləkə və tüklər üçün Cleaning Express Service-in xalça və yumşaq mebel təmizliyi xidmətindən istifadə edin.</p>
+    `
+  },
+  {
+    slug: 'xalca-temizliyinde-diqqet',
+    title: 'Xalça Təmizliyində Diqqət Edilməli Məqamlar',
+    description: 'Xalça və yumşaq mebellərin ömrünü uzatmaq, ləkələrdən düzgün xilas olmaq üçün tətbiq edilməli olan peşəkar metodlar.',
+    content: `
+      <h2>Evimizin Bəzəyi: Xalçalar və Mebellər</h2>
+      <p>Xalçalar və yumşaq mebellər evin ən çox istifadə edilən və buna görə də ən çox çirklənən əşyalarıdır. Onların yanlış təmizlənməsi həm görünüşünü poza, həm də materialına ciddi zərər verə bilər.</p>
+      <h3>Yanlış Kimyəvilərdən Qaçın</h3>
+      <p>Marketlərdə satılan ləkə çıxarıcıların əksəriyyəti sərt kimyəvi maddələrdən ibarətdir. Bunlar xalçanın rəngini soldura və mebelin parçasına ziyan vura bilər. Hər hansı bir vasitəni istifadə etməzdən əvvəl həmişə görünməyən bir hissədə test edin.</p>
+      <h3>Suyu Çox İstifade Etməyin</h3>
+      <p>Xalça və ya divanı təmizləyərkən həddindən artıq su istifadə etmək mebelin daxilinə su sızmasına, nəticədə kif və pis qoxunun yaranmasına səbəb olur. Nəmi minimumda saxlamaq vacibdir.</p>
+      <h3>Mütəmadi Peşəkar Təmizlik</h3>
+      <p>Tozsoran yalnız səthdəki tozları yığır. Xalçanın dərinliklərinə hopmuş bakteriya, mikrob və kir yalnız peşəkar avadanlıqlarla təmizlənə bilər. İldə ən azı iki dəfə xalça və mebellərin peşəkar kimyəvi təmizliyini etdirmək həm sağlamlığınız, həm də əşyalarınızın uzunömürlülüyü üçün vacibdir.</p>
+    `
+  }
+];
+
+mkdirSync('bloq', { recursive: true });
+
+for (const blog of BLOGS) {
+  const body = `
+<section class="hero container service-hero">
+  <div class="hero-text" style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <nav class="crumbs" aria-label="Breadcrumb" style="justify-content: center;"><a href="/">Ana səhifə</a> / <a href="/bloq.html">Bloq</a> / <span>Məqalə</span></nav>
+    <h1>${blog.title}</h1>
+  </div>
+</section>
+<section class="section container">
+  <article class="glass" style="padding: 2rem; border-radius: 1rem; max-width: 800px; margin: 0 auto;">
+    ${blog.content}
+  </article>
+</section>`;
+  
+  writeFileSync(
+    `bloq/${blog.slug}.html`,
+    layout({
+      title: `${blog.title} | ${SITE.name}`,
+      desc: blog.description,
+      path: `/bloq/${blog.slug}.html`,
+      scene: 'home',
+      active: 'blog',
+      body,
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: blog.title,
+        description: blog.description,
+        author: { '@type': 'Organization', name: SITE.name },
+        publisher: bizSchema
+      }
+    })
+  );
+}
+
+const blogCardsHtml = BLOGS.map(blog => `
+    <a class="card glass" href="/bloq/${blog.slug}.html">
+      <h3>${blog.title}</h3>
+      <p>${blog.description.substring(0, 100)}...</p>
+    </a>`).join('');
+
 const blogBody = `
 <section class="hero container service-hero">
   <div class="hero-text" style="max-width: 800px; margin: 0 auto; text-align: center;">
@@ -260,16 +398,15 @@ const blogBody = `
 </section>
 <section class="section container">
   <div class="cards">
-    <a class="card glass" href="#"><h3>Bahar təmizliyi üçün 5 qızıl qayda</h3><p>Evdə bahar ab-havası yaratmaq üçün nədən başlamalı olduğunuzu öyrənin.</p></a>
-    <a class="card glass" href="#"><h3>Yumşaq mebellərin ömrünü necə uzatmaq olar?</h3><p>Ləkələrlə mübarizə və ev şəraitində ilkin müdaxilə yolları.</p></a>
-    <a class="card glass" href="#"><h3>Təmir sonrası tozlardan xilas olmağın yolları</h3><p>İnşaat tozunun zərərləri və təmizlənmə prosesinin incəlikləri.</p></a>
+    ${blogCardsHtml}
   </div>
 </section>`;
+
 writeFileSync('bloq.html', layout({ title: `Bloq | ${SITE.name}`, desc: 'Təmizlik haqqında faydalı məqalələr və praktiki məsləhətlər.', path: '/bloq.html', scene: 'home', active: 'blog', body: blogBody, schema: bizSchema }));
 
 
 // ---------- SEO fayllari ----------
-const urls = ['/', '/haqqimizda.html', '/bloq.html', ...SERVICES.map((s) => "/xidmetler/$(${s.slug}).html")];
+const urls = ['/', '/haqqimizda.html', '/bloq.html', ...SERVICES.map((s) => `/xidmetler/${s.slug}.html`), ...BLOGS.map((b) => `/bloq/${b.slug}.html`)];
 writeFileSync('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls.map(u => '  <url><loc>' + SITE.url + u + '</loc></url>').join('\n') + '\n</urlset>\n');
 writeFileSync('robots.txt', 'User-agent: *\nAllow: /\nSitemap: ' + SITE.url + '/sitemap.xml\n');
-console.log('? ' + urls.length + ' s?hif? yaradildi');
+console.log('✔ ' + urls.length + ' səhifə yaradıldı');
