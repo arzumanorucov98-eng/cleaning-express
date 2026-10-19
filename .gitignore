@@ -1,4 +1,8 @@
 node_modules/
 .DS_Store
-
 .vercel
+.next/
+next-app/.next/
+next-app/out/
+next-app/node_modules/
+next-app/.env*.local
